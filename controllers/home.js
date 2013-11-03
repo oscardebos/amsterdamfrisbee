@@ -4,25 +4,10 @@
 	'use strict';
 	
 	// Controller voor de homepage
-	AMSTERDAMFRISBEE.controller('homeController', ['$scope', 'model_tournament', 'model_globals', '$window',  function($scope, model_tournament, model_globals, $window){
+	AMSTERDAMFRISBEE.controller('homeController', ['$scope', 'model_tournament', 'model_globals',  function($scope, model_tournament, model_globals){
 
 		console.log("> Start home controller");
-		
-		// Breadcrumbs
-		//model_globals.setBreadCrumbs(false);
 
-		/*
-		Hammer(document.getElementById("container")).on("doubletap", function(ev) {
-			ev.gesture.preventDefault();
-			console.log("doubletap");
-			console.log($window.history);
-			//$window.history.back();
-		});
-		*/
-
-		$scope.swipeLeft = function(){
-			console.log("SWIPE LEFT");
-		}
 
 		// TournamentInformation
 		var temp = model_tournament.getFromLocal("TournamentInformation");
