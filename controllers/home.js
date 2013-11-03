@@ -12,7 +12,9 @@
 		//model_globals.setBreadCrumbs(false);
 
 
-		Hammer(document.getElementById("container")).on("swipeleft", function() {
+		Hammer(document.getElementById("container")).on("swipeleft", function(ev) {
+			ev.gesture.preventDefault();
+			console.log("hello");
 			$window.history.back();
 		});
 		
