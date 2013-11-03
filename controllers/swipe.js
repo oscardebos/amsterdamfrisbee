@@ -9,6 +9,7 @@
 		console.log("> Start swipe controller");
 		
 		$scope.goBack = function(){
+			console.log("Go back in time");
 			$window.history.back();
 		}
 
