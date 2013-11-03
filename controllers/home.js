@@ -7,6 +7,9 @@
 	AMSTERDAMFRISBEE.controller('homeController', ['$scope', 'model_tournament', 'model_globals',  function($scope, model_tournament, model_globals){
 
 		console.log("> Start home controller");
+		
+
+		$('#hook').hook();
 
 		// Breadcrumbs
 		//model_globals.setBreadCrumbs(false);
@@ -38,6 +41,7 @@
 				console.log("- Laden niet gelukt");
 			}
 		);
+
 
 	}]);
 
