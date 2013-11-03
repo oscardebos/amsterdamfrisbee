@@ -17,9 +17,9 @@
 			
 		});
 
-		Hammer(document.getElementById("container")).on("swipeleft", function(ev) {
+		Hammer(document.getElementById("container")).on("doubletap", function(ev) {
 			ev.gesture.preventDefault();
-			console.log("swipeleft");
+			console.log("doubletap");
 		});
 		
 		// TournamentInformation
