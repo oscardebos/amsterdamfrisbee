@@ -11,11 +11,15 @@
 		// Breadcrumbs
 		//model_globals.setBreadCrumbs(false);
 
+		Hammer(document.getElementById("container")).on("tap", function(ev) {
+			ev.gesture.preventDefault();
+			console.log("tap");
+			
+		});
 
 		Hammer(document.getElementById("container")).on("swipeleft", function(ev) {
 			ev.gesture.preventDefault();
-			console.log("hello");
-			$window.history.back();
+			console.log("swipeleft");
 		});
 		
 		// TournamentInformation
