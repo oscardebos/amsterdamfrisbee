@@ -1,5 +1,5 @@
 // Benoem de applicatie (module).
-var AMSTERDAMFRISBEE = angular.module('AMSTERDAMFRISBEE', ['LocalStorageModule', 'ngResource']);
+var AMSTERDAMFRISBEE = angular.module('AMSTERDAMFRISBEE', ['LocalStorageModule', 'ngResource', 'ngRoute', 'ngTouch']);
 
 
 // Router

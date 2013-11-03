@@ -12,7 +12,7 @@
 		<img src="/img/loader.gif" alt="" ng-hide="tournamentInformation">
 		<div class="row" ng-show="tournamentInformation">
 			<div class="col-md-12">
-				<h1>{{tournamentInformation.name}}</h1>
+				<h1 ng-swipe-left="swipeLeft()">{{tournamentInformation.name}}</h1>
 				<p>from: {{tournamentInformation.start_date}} | till: {{tournamentInformation.end_date}}</p>
 				<br>
 				<div ng-bind-html-unsafe="tournamentInformation.info"></div>

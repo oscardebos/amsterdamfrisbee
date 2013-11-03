@@ -5,9 +5,10 @@ AMSTERDAMFRISBEE.controller('poolController', ['$scope', '$routeParams', 'model_
 
 	$scope.poolId = $routeParams.id;
 
+	/*
 	Hammer(document.getElementById("container")).on("swipeleft", function() {
 		$window.history.back();
-	});
+	});*/
 
 	// Pool information
 	var temp = model_tournament.getFromLocal("TournamentPoolInfomation_"+$scope.poolId);
