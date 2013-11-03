@@ -12,7 +12,7 @@
 		//model_globals.setBreadCrumbs(false);
 
 
-		Hammer(document.getElementById("container")).on("tap", function() {
+		Hammer(document.getElementById("container")).on("swipeleft", function() {
 			$window.history.back();
 		});
 		
