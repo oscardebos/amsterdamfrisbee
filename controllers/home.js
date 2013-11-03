@@ -8,11 +8,13 @@
 
 		console.log("> Start home controller");
 		
-
-		$('#hook').hook();
-
 		// Breadcrumbs
 		//model_globals.setBreadCrumbs(false);
+
+
+		Hammer(document.getElementById("container")).on("swipeleft", function() {
+			$window.history.back();
+		});
 		
 		// TournamentInformation
 		var temp = model_tournament.getFromLocal("TournamentInformation");

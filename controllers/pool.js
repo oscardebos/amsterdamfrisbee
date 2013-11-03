@@ -1,10 +1,13 @@
 // Controller voor de team page
-AMSTERDAMFRISBEE.controller('poolController', ['$scope', '$routeParams', 'model_tournament', 'model_globals',  function($scope, $routeParams, model_tournament, model_globals){
+AMSTERDAMFRISBEE.controller('poolController', ['$scope', '$routeParams', 'model_tournament', 'model_globals', '$window',  function($scope, $routeParams, model_tournament, model_globals, $window){
 
 	console.log("> Start pool controller");
 
 	$scope.poolId = $routeParams.id;
 
+	Hammer(document.getElementById("container")).on("swipeleft", function() {
+		$window.history.back();
+	});
 
 	// Pool information
 	var temp = model_tournament.getFromLocal("TournamentPoolInfomation_"+$scope.poolId);
