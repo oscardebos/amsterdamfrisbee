@@ -3,9 +3,14 @@
 
 	'use strict';
 	
-	AMSTERDAMFRISBEE.controller('menuController', ['$scope', '$rootScope', 'model_loader', 'model_globals', 'model_user',  function($scope, $rootScope, model_loader, model_globals, model_user){
+	AMSTERDAMFRISBEE.controller('menuController', ['$scope', '$rootScope', 'model_loader', 'model_globals', 'model_user', '$location', 'model_page_slide', '$timeout',  function($scope, $rootScope, model_loader, model_globals, model_user, $location, model_page_slide, $timeout){
 
 		console.log("> Start menu controller");
+
+		$timeout(function() {
+			console.log("TIME OUT OVER");
+			model_page_slide.setSlideStyle("style_from_right");
+		}, 2000);
 		
 		$scope.clientId = model_globals.getAuthKey('clientId');
 
@@ -15,6 +20,14 @@
 			}else{
 				return "hidden";
 			}
+		}
+
+
+		$scope.goHome = function(){
+			console.log("click to home");
+			console.log(model_page_slide);
+			model_page_slide.setSlideStyle("style_from_left");
+			$location.path("/");
 		}
 
 

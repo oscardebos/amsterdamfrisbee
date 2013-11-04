@@ -1,5 +1,5 @@
 // Controller voor de team page
-AMSTERDAMFRISBEE.controller('poolController', ['$scope', '$routeParams', 'model_tournament', 'model_globals', '$window',  function($scope, $routeParams, model_tournament, model_globals, $window){
+AMSTERDAMFRISBEE.controller('poolController', ['$scope', '$routeParams', 'model_tournament', 'model_globals', '$window', function($scope, $routeParams, model_tournament, model_globals, $window){
 
 	console.log("> Start pool controller");
 

@@ -1,5 +1,5 @@
 // Benoem de applicatie (module).
-var AMSTERDAMFRISBEE = angular.module('AMSTERDAMFRISBEE', ['LocalStorageModule', 'ngResource', 'ngRoute', 'ngTouch']);
+var AMSTERDAMFRISBEE = angular.module('AMSTERDAMFRISBEE', ['LocalStorageModule', 'ngResource', 'ngRoute', 'ngTouch', 'ngAnimate', 'ngSanitize']);
 
 
 // Router
@@ -9,7 +9,7 @@ var AMSTERDAMFRISBEE = angular.module('AMSTERDAMFRISBEE', ['LocalStorageModule',
 
 	// Stel een router in en bepaal welke view en controller gebruikt moeten worden.
 	AMSTERDAMFRISBEE.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-					
+		
 		// Home
 		$routeProvider.when('/', { templateUrl: '/views/home.html', controller: 'homeController' });
 
